@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111827">
+<meta name="description" content="EnDirect : petites annonces entre particuliers, offres négociables et présentations en direct.">
+<title>EnDirect — Ventes entre particuliers</title>
+<style>
+:root{--bg:#f6f7f9;--ink:#17202c;--muted:#687386;--line:#e3e7ed;--card:#fff;--accent:#e24c36;--dark:#111827;--green:#18794e;--yellow:#fff4d6}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:11px;padding:11px 14px;background:var(--dark);color:white;font-weight:750}button:disabled{opacity:.5;cursor:not-allowed}.light{background:#eef1f5;color:var(--ink)}.red{background:var(--accent);color:white}.outline{background:white;color:var(--ink);border:1px solid var(--line)}.wrap{max-width:1120px;margin:auto;padding:15px 18px}.topbar{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:950;font-size:24px;letter-spacing:-1px}.brand span{color:var(--accent)}.nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.nav button{padding:9px 12px;font-size:13px}.hero{padding:32px 0 22px;display:grid;grid-template-columns:1.35fr 1fr;gap:22px;align-items:center}.eyebrow{display:inline-block;background:#ffe6e0;color:#9f2e1d;border-radius:30px;padding:6px 10px;font-size:11px;font-weight:900;letter-spacing:.5px}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.02;letter-spacing:-2px;margin:13px 0}.hero p{line-height:1.55;color:var(--muted);max-width:620px}.hero-panel{background:var(--dark);color:white;border-radius:22px;padding:24px;min-height:200px;display:flex;flex-direction:column;justify-content:space-between}.hero-panel strong{font-size:25px;line-height:1.16}.hero-panel small{color:#c6ccd5;line-height:1.45}.status{padding:11px 14px;border-radius:12px;background:var(--yellow);border:1px solid #efdfae;font-size:12px;line-height:1.5;margin:12px 0 18px}.status.ok{background:#e8f7ef;border-color:#b7e2c8}.tools{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}.search{flex:1;min-width:190px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:white}.chips{display:flex;gap:8px;overflow:auto;padding:2px 0 14px}.chip{white-space:nowrap;background:white;color:var(--ink);border:1px solid var(--line);padding:8px 12px;border-radius:30px;font-size:12px}.chip.active{background:var(--dark);color:white}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:20px 0 12px}.section-head h2{font-size:22px;margin:0}.section-head p{font-size:12px;color:var(--muted);margin:4px 0 0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden;min-width:0}.thumb{height:145px;background:linear-gradient(135deg,#e4e8ee,#f9fafb);display:flex;align-items:center;justify-content:center;font-size:48px;position:relative}.tag{position:absolute;top:10px;left:10px;border-radius:6px;padding:5px 8px;font-size:10px;font-weight:900;background:#e8f7ef;color:#12663f}.tag.demo{background:#eef1f5;color:#525e6e}.card-body{padding:14px}.cat{font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);font-weight:850}.title{font-weight:850;margin:5px 0 7px;overflow-wrap:anywhere}.price{font-size:22px;font-weight:950;letter-spacing:-.5px}.seller{font-size:12px;color:var(--muted);margin:5px 0 12px}.desc{font-size:13px;line-height:1.4;color:#414b59;min-height:36px;margin-bottom:12px;overflow-wrap:anywhere}.actions{display:flex;gap:7px}.actions button{flex:1;padding:10px 7px;font-size:12px}.empty{display:none;text-align:center;padding:35px;background:white;border:1px dashed var(--line);border-radius:16px;color:var(--muted)}.panel{background:white;border:1px solid var(--line);border-radius:16px;padding:16px;margin:15px 0}.panel h3{margin:0 0 12px}.listrow{display:flex;justify-content:space-between;align-items:start;gap:10px;border-top:1px solid var(--line);padding:12px 0}.listrow:first-of-type{border-top:0}.small{font-size:12px;color:var(--muted);line-height:1.5}.modal{display:none;position:fixed;inset:0;background:#11182799;z-index:20;align-items:center;justify-content:center;padding:14px}.modal.open{display:flex}.dialog{background:white;border-radius:19px;padding:21px;max-width:520px;width:100%;max-height:92vh;overflow:auto}.dialog h2{margin:0 0 7px}.field{display:block;font-size:12px;font-weight:800;margin:13px 0}.field input,.field select,.field textarea{display:block;width:100%;padding:12px;margin-top:6px;border:1px solid #dce1e8;border-radius:10px;background:white;color:var(--ink)}.field textarea{min-height:85px;resize:vertical}.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.dlgactions{display:flex;gap:8px;margin-top:17px}.dlgactions button{flex:1}.toast{display:none;position:fixed;z-index:30;bottom:18px;left:50%;transform:translateX(-50%);background:#111827;color:white;padding:12px 16px;border-radius:12px;max-width:92%;font-size:13px;box-shadow:0 8px 35px #0003}footer{color:var(--muted);font-size:12px;line-height:1.6;padding:26px 0 45px}a{color:inherit}.hidden{display:none!important}.danger{color:#a51d16}.pill{display:inline-block;padding:4px 8px;border-radius:20px;background:#eef1f5;font-size:11px;font-weight:800}
+@media(max-width:740px){.hero{grid-template-columns:1fr;padding-top:22px}.hero-panel{min-height:150px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.thumb{height:115px}.card-body{padding:11px}.price{font-size:19px}.top{align-items:flex-start}.nav{justify-content:flex-end}.nav button{font-size:11px;padding:8px}.brand{font-size:21px}}
+@media(max-width:450px){.grid{grid-template-columns:1fr}.thumb{height:150px}.hero h1{font-size:38px}.row2{grid-template-columns:1fr}.nav button[data-wide]{display:none}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap top"><div class="brand">En<span>Direct</span></div><div class="nav"><button class="light" onclick="openAuth()" id="authButton">Connexion</button><button class="light" onclick="showMyOffers()">Mes offres</button><button class="light" onclick="showMine()">Mes annonces</button><button class="red" onclick="openListing()">＋ Vendre</button></div></div></header>
+<main class="wrap">
+<section class="hero"><div><span class="eyebrow">VENTE ENTRE PARTICULIERS</span><h1>Les bonnes affaires se vivent en direct.</h1><p>Publie un bien, échange avec les acheteurs et reçois des propositions. Tu gardes le contrôle : tu choisis ton acheteur et conclues directement la vente.</p><button class="red" onclick="openListing()">Déposer une annonce gratuitement</button></div><div class="hero-panel"><small>LE PRINCIPE</small><strong>Tu présentes.<br>Tu négocies.<br>Tu décides.</strong><small>Pas de mise payante, pas de crédits, pas de paiement encaissé par EnDirect dans cette version.</small></div></section>
+<div id="backendStatus" class="status">Mode local : les annonces et offres sont enregistrées sur cet appareil seulement. Pour rendre le service multiutilisateur, configure la base Supabase avec les instructions du kit.</div>
+<div class="tools"><input class="search" id="search" placeholder="Rechercher un bien, une ville…" oninput="render()"><button class="light" onclick="toggleFaves()">♥ Favoris</button><button class="light" onclick="exportBackup()">Exporter mes données</button><button class="light" onclick="document.getElementById('importFile').click()">Importer</button><input id="importFile" type="file" accept="application/json" class="hidden" onchange="importBackup(event)"></div>
+<div class="chips" id="chips"><button class="chip active" data-cat="Tout" onclick="setCat('Tout',this)">Tout</button><button class="chip" data-cat="Téléphones" onclick="setCat('Téléphones',this)">Téléphones</button><button class="chip" data-cat="Maison" onclick="setCat('Maison',this)">Maison</button><button class="chip" data-cat="Mode" onclick="setCat('Mode',this)">Mode</button><button class="chip" data-cat="Loisirs" onclick="setCat('Loisirs',this)">Loisirs</button><button class="chip" data-cat="Autre" onclick="setCat('Autre',this)">Autre</button></div>
+<section id="annonces"><div class="section-head"><div><h2 id="listTitle">Annonces à découvrir</h2><p id="listSub">Les exemples sont signalés comme démonstrations.</p></div><span id="count" class="pill">0 annonce</span></div><div class="grid" id="grid"></div><div class="empty" id="empty">Aucun résultat. Essaie un autre mot ou une autre catégorie.</div></section>
+<section id="dashboard" class="panel hidden"><div class="section-head"><div><h2 id="dashTitle">Mon espace</h2><p>Les données locales restent sur cet appareil.</p></div><button class="light" onclick="hideDashboard()">Fermer</button></div><div id="dashBody"></div></section>
+<div class="status"><strong>Prototype transparent :</strong> en mode local, rien n'est publié sur Internet. Les offres sont des propositions non contractuelles jusqu'à acceptation expresse du vendeur et accord direct des parties. Ne verse jamais d'argent pour « débloquer » une offre.</div>
+<footer>EnDirect · Prototype de mise en relation entre particuliers.<br>La plateforme ne garantit pas l'identité des utilisateurs, l'état des biens, le paiement ni la livraison. Les documents juridiques du kit sont des brouillons à compléter avant une ouverture publique. <br><a href="docs/02-cadre-juridique.md">Cadre juridique</a> · <a href="docs/03-regles-utilisation-brouillon.md">Règles provisoires</a> · <a href="docs/04-confidentialite-brouillon.md">Confidentialité à compléter</a></footer>
+</main>
+<div class="modal" id="listingModal" role="dialog" aria-modal="true"><div class="dialog"><h2>Déposer une annonce</h2><p class="small">Dans cette version, l'annonce est enregistrée sur cet appareil. Ne publie pas d'informations personnelles inutiles.</p><form id="listingForm"><label class="field">Titre du bien<input name="name" required maxlength="70" placeholder="Ex. Smartphone en bon état"></label><div class="row2"><label class="field">Prix demandé (€)<input name="price" type="number" min="0" step="0.01" required placeholder="120"></label><label class="field">Catégorie<select name="category"><option>Téléphones</option><option>Maison</option><option>Mode</option><option>Loisirs</option><option>Autre</option></select></label></div><div class="row2"><label class="field">Ville<input name="city" required maxlength="50" placeholder="Nouméa"></label><label class="field">Pseudo vendeur<input name="seller" required maxlength="40" placeholder="Ton pseudo"></label></div><label class="field">Lien de contact (facultatif)<input name="contact" type="url" placeholder="https://wa.me/..."></label><label class="field">Lien du live (facultatif)<input name="live_url" type="url" placeholder="Lien de diffusion externe"></label><label class="field">Description<textarea name="description" maxlength="500" required placeholder="État, défauts, accessoires, remise…"></textarea></label><label class="field"><input style="display:inline;width:auto" type="checkbox" name="confirm" required> Je suis autorisé à vendre ce bien et les informations sont exactes.</label><div class="dlgactions"><button type="button" class="light" onclick="closeModal('listingModal')">Annuler</button><button class="red" type="submit">Enregistrer</button></div></form></div></div>
+<div class="modal" id="offerModal" role="dialog" aria-modal="true"><div class="dialog"><h2>Faire une proposition</h2><p id="offerItem" class="small"></p><form id="offerForm"><input type="hidden" name="itemId"><label class="field">Ton pseudo<input name="buyer" required maxlength="40" placeholder="Pseudo acheteur"></label><label class="field">Ta proposition (€)<input name="amount" type="number" min="0" step="0.01" required placeholder="Montant proposé"></label><label class="field">Message facultatif<textarea name="message" maxlength="400" placeholder="Question ou précision pour le vendeur"></textarea></label><label class="field">Lien de contact facultatif<input name="contact" type="url" placeholder="https://wa.me/..."></label><p class="small">En mode local, l'offre reste sur cet appareil : le vendeur ne la recevra pas automatiquement. Elle ne vaut pas contrat de vente.</p><div class="dlgactions"><button type="button" class="light" onclick="closeModal('offerModal')">Annuler</button><button class="red" type="submit">Enregistrer l'offre</button></div></form></div></div>
+
+<div class="modal" id="authModal" role="dialog" aria-modal="true"><div class="dialog"><h2 id="authTitle">Connexion</h2><p class="small">Pour publier des annonces et transmettre de vraies offres, connecte-toi à ton compte EnDirect.</p><form id="authForm"><label class="field">Pseudo (inscription seulement)<input name="username" maxlength="40" placeholder="Ton pseudo"></label><label class="field">Adresse e-mail<input name="email" type="email" required autocomplete="email" placeholder="toi@exemple.fr"></label><label class="field">Mot de passe<input name="password" type="password" required minlength="8" autocomplete="current-password" placeholder="8 caractères minimum"></label><div class="dlgactions"><button type="button" class="light" onclick="closeModal('authModal')">Fermer</button><button type="submit" class="red">Continuer</button></div></form><p class="small" style="margin-top:12px">Tu peux basculer entre connexion et inscription.</p><button class="outline" style="width:100%" id="authSwitch" onclick="toggleAuthMode()">Créer un compte</button><button class="light hidden" style="width:100%;margin-top:8px" id="signOutButton" onclick="signOut()">Se déconnecter</button></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = ""; // À renseigner après création du projet Supabase
+const SUPABASE_ANON_KEY = ""; // Clé publique anon uniquement, jamais service_role
+const KEY='endirect_v1_state';
+const demo=[
+{id:'demo-1',name:'Smartphone en très bon état',price:120,category:'Téléphones',city:'Exemple',emoji:'📱',seller:'Exemple',description:'Annonce de démonstration : à remplacer par un bien réel.',demo:true},
+{id:'demo-2',name:'Lampe de salon',price:25,category:'Maison',city:'Exemple',seller:'Exemple',description:'Annonce de démonstration : aucune vente réelle.',demo:true},
+{id:'demo-3',name:'Sac à dos',price:18,category:'Mode',city:'Exemple',seller:'Exemple',description:'Annonce de démonstration : aucune vente réelle.',demo:true}
+];
+let state=loadState(),cat='Tout',favesOnly=false,view='all',supabase=null,currentUser=null,authMode='login',remoteItems=[];
+const backendConfigured=Boolean(SUPABASE_URL && SUPABASE_ANON_KEY && window.supabase);
+if(backendConfigured){supabase=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);}
+function loadState(){try{return JSON.parse(localStorage.getItem(KEY))||{items:[],offers:[],faves:[]}}catch{return{items:[],offers:[],faves:[]}}}
+function save(){localStorage.setItem(KEY,JSON.stringify(state))}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function money(n){return Number(n).toLocaleString('fr-FR',{style:'currency',currency:'EUR'})}
+function normRemote(x){return {id:x.id,name:x.title,price:x.price_cents/100,category:x.category,city:x.city,seller:x.profiles?.username||'Particulier',description:x.description,contact:x.contact_url||'',live_url:x.live_url||'',created_at:x.created_at,demo:false,seller_id:x.seller_id,status:x.status}}
+function allItems(){return backendConfigured?[...remoteItems,...demo]:[...state.items,...demo]}
+function setStatus(text,ok=false){const e=document.getElementById('backendStatus');e.textContent=text;e.className='status'+(ok?' ok':'')}
+async function init(){
+ if(backendConfigured){
+  try{const {data:{session}}=await supabase.auth.getSession();currentUser=session?.user||null;await supabase.auth.onAuthStateChange((_event,session)=>{currentUser=session?.user||null;updateAuthUI();loadRemote()});updateAuthUI();await loadRemote();}
+  catch(e){setStatus('Backend configuré mais connexion impossible : '+e.message)}
+ } else {
+  setStatus('Mode local : données enregistrées sur cet appareil uniquement. Pour un service partagé, renseigner les deux paramètres Supabase dans index.html après création du projet.');
+  render();
+ }
+}
+async function loadRemote(){
+ if(!backendConfigured){render();return}
+ const {data,error}=await supabase.from('listings').select('*, profiles(username)').eq('status','active').order('created_at',{ascending:false}).limit(100);
+ if(error){setStatus('Backend non prêt : '+error.message+' — vérifier le SQL et la configuration Supabase.');remoteItems=[]}
+ else {remoteItems=(data||[]).map(normRemote);setStatus('Mode connecté : annonces partagées via Supabase. Les paiements restent hors plateforme.',true)}
+ render();
+}
+function updateAuthUI(){
+ const b=document.getElementById('authButton');
+ if(currentUser){b.textContent='Mon compte';document.getElementById('authSwitch').classList.add('hidden');document.getElementById('signOutButton').classList.remove('hidden')}
+ else{b.textContent='Connexion';document.getElementById('authSwitch').classList.remove('hidden');document.getElementById('signOutButton').classList.add('hidden')}
+}
+function render(){
+ const q=document.getElementById('search').value.trim().toLowerCase();
+ let shown=allItems().filter(x=>(cat==='Tout'||x.category===cat)&&[x.name,x.category,x.city,x.description,x.seller].join(' ').toLowerCase().includes(q));
+ if(favesOnly)shown=shown.filter(x=>state.faves.includes(x.id));
+ if(view==='mine')shown=backendConfigured?shown.filter(x=>x.seller_id===currentUser?.id):state.items.filter(x=>(cat==='Tout'||x.category===cat)&&[x.name,x.category,x.city,x.description].join(' ').toLowerCase().includes(q));
+ document.getElementById('listTitle').textContent=view==='mine'?'Mes annonces':view==='faves'?'Mes favoris':'Annonces à découvrir';
+ document.getElementById('listSub').textContent=view==='mine'?'Annonces créées par ton compte.':view==='faves'?'Tes favoris sur cet appareil.':'Les exemples sont signalés comme démonstrations.';
+ document.getElementById('count').textContent=shown.length+' annonce'+(shown.length===1?'':'s');
+ document.getElementById('grid').innerHTML=shown.map(x=>`<article class="card"><div class="thumb"><span class="tag ${x.demo?'demo':''}">${x.demo?'DÉMO':x.live_url?'LIEN LIVE':'PARTICULIER'}</span>${({'Téléphones':'📱','Maison':'🏠','Mode':'🧥','Loisirs':'🎮','Autre':'📦'})[x.category]||'📦'}</div><div class="card-body"><div class="cat">${esc(x.category)} · ${esc(x.city)}</div><div class="title">${esc(x.name)}</div><div class="price">${money(x.price)}</div><div class="seller">${esc(x.seller||'Particulier')} · Prix demandé</div><div class="desc">${esc(x.description)}</div><div class="actions"><button onclick="makeOffer('${esc(x.id)}')" ${x.demo?'disabled title="Annonce de démonstration"':''}>Faire une offre</button><button class="light" onclick="details('${esc(x.id)}')">Détails</button></div><div class="actions" style="margin-top:7px"><button class="outline" onclick="favorite('${esc(x.id)}')">${state.faves.includes(x.id)?'♥ Favori':'♡ Favoris'}</button>${x.contact?`<button class="light" onclick="contact('${esc(x.id)}')">Contacter</button>`:''}${x.live_url?`<button class="light" onclick="openLive('${esc(x.id)}')">Voir le live</button>`:''}</div></div></article>`).join('');
+ document.getElementById('empty').style.display=shown.length?'none':'block';
+}
+function setCat(c,b){cat=c;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x.dataset.cat===c));render()}
+function openListing(){if(backendConfigured&&!currentUser){openAuth();toast('Connecte-toi pour publier une annonce.');return}document.getElementById('listingModal').classList.add('open')}
+function closeModal(id){document.getElementById(id).classList.remove('open')}
+function toast(s){const t=document.getElementById('toast');t.textContent=s;t.style.display='block';clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.style.display='none',3500)}
+function getItem(id){return allItems().find(x=>x.id===id)}
+function details(id){const x=getItem(id);if(!x)return;let msg=`${x.name}\nPrix demandé : ${money(x.price)}\nCatégorie : ${x.category}\nVille : ${x.city}\nVendeur : ${x.seller}\n\n${x.description}`;if(x.live_url)msg+='\n\nLive : '+x.live_url;alert(msg)}
+function contact(id){const x=getItem(id);if(x?.contact)window.open(x.contact,'_blank','noopener,noreferrer');else toast('Aucun lien de contact renseigné.')}
+function openLive(id){const x=getItem(id);if(x?.live_url)window.open(x.live_url,'_blank','noopener,noreferrer')}
+function favorite(id){state.faves=state.faves.includes(id)?state.faves.filter(a=>a!==id):[...state.faves,id];save();render();toast(state.faves.includes(id)?'Ajouté aux favoris.':'Retiré des favoris.')}
+function toggleFaves(){favesOnly=!favesOnly;view=favesOnly?'faves':'all';render();document.getElementById('annonces').scrollIntoView({behavior:'smooth'})}
+function makeOffer(id){const x=getItem(id);if(!x||x.demo)return;if(backendConfigured&&!currentUser){openAuth();toast('Connecte-toi pour faire une offre.');return}const f=document.getElementById('offerForm');f.reset();f.elements.itemId.value=id;document.getElementById('offerItem').textContent=`${x.name} — prix demandé : ${money(x.price)}`;document.getElementById('offerModal').classList.add('open')}
+document.getElementById('listingForm').addEventListener('submit',async e=>{
+ e.preventDefault();const f=new FormData(e.target);const item={name:f.get('name').trim(),price:Number(f.get('price')),category:f.get('category'),city:f.get('city').trim(),seller:f.get('seller').trim(),contact:f.get('contact').trim(),live_url:f.get('live_url').trim(),description:f.get('description').trim()};
+ if(!Number.isFinite(item.price)||item.price<0){toast('Prix invalide.');return}
+ if(backendConfigured){
+  if(!currentUser){toast('Connecte-toi avant de publier.');return}
+  const {error}=await supabase.from('listings').insert({seller_id:currentUser.id,title:item.name,description:item.description,category:item.category,city:item.city,price_cents:Math.round(item.price*100),contact_url:item.contact||null,live_url:item.live_url||null});
+  if(error){toast('Publication impossible : '+error.message);return}
+  closeModal('listingModal');e.target.reset();view='all';await loadRemote();toast('Annonce publiée.');document.getElementById('annonces').scrollIntoView({behavior:'smooth'});
+ }else{
+  state.items.unshift({id:'item-'+crypto.randomUUID(),...item,created_at:new Date().toISOString(),demo:false});save();closeModal('listingModal');e.target.reset();view='all';favesOnly=false;render();toast('Annonce enregistrée sur cet appareil, non visible par les autres.');document.getElementById('annonces').scrollIntoView({behavior:'smooth'});
+ }
+});
+document.getElementById('offerForm').addEventListener('submit',async e=>{
+ e.preventDefault();const f=new FormData(e.target);const amount=Number(f.get('amount'));if(!Number.isFinite(amount)||amount<0){toast('Montant invalide.');return}
+ if(backendConfigured){
+  const id=f.get('itemId'),item=getItem(id);if(!currentUser){toast('Connecte-toi pour faire une offre.');return}if(item?.seller_id===currentUser.id){toast('Tu ne peux pas faire une offre sur ta propre annonce.');return}
+  const {error}=await supabase.from('offers').insert({listing_id:id,buyer_id:currentUser.id,amount_cents:Math.round(amount*100),message:f.get('message').trim()||null});
+  if(error){toast('Offre non envoyée : '+error.message);return}
+  closeModal('offerModal');e.target.reset();toast('Offre transmise au vendeur.');return;
+ }
+ state.offers.unshift({id:'offer-'+crypto.randomUUID(),itemId:f.get('itemId'),buyer:f.get('buyer').trim(),amount,message:f.get('message').trim(),contact:f.get('contact').trim(),status:'En attente',created_at:new Date().toISOString()});save();closeModal('offerModal');e.target.reset();toast('Offre enregistrée localement seulement : le vendeur ne la reçoit pas.');
+});
+function openAuth(){if(!backendConfigured){toast('Le compte partagé nécessite la configuration Supabase.');return}authMode=currentUser?'account':'login';document.getElementById('authTitle').textContent=currentUser?'Compte connecté':'Connexion';document.getElementById('authForm').classList.toggle('hidden',!!currentUser);document.getElementById('authForm').elements.username.parentElement.classList.toggle('hidden',authMode!=='signup');document.getElementById('authSwitch').classList.toggle('hidden',!!currentUser);document.getElementById('signOutButton').classList.toggle('hidden',!currentUser);document.getElementById('authModal').classList.add('open')}
+function toggleAuthMode(){authMode=authMode==='login'?'signup':'login';document.getElementById('authTitle').textContent=authMode==='signup'?'Créer un compte':'Connexion';document.getElementById('authSwitch').textContent=authMode==='signup'?'J’ai déjà un compte':'Créer un compte';document.getElementById('authForm').elements.username.parentElement.classList.toggle('hidden',authMode!=='signup');document.getElementById('authForm').elements.password.autocomplete=authMode==='signup'?'new-password':'current-password'}
+document.getElementById('authForm').addEventListener('submit',async e=>{
+ e.preventDefault();if(!backendConfigured){toast('Backend non configuré.');return}const f=new FormData(e.target),email=f.get('email').trim(),password=f.get('password'),username=(f.get('username')||'').trim();
+ let result;
+ if(authMode==='signup')result=await supabase.auth.signUp({email,password,options:{data:{username:username||email.split('@')[0]}}});
+ else result=await supabase.auth.signInWithPassword({email,password});
+ if(result.error){toast('Connexion impossible : '+result.error.message);return}
+ if(authMode==='signup'&&!result.data.session){toast('Compte créé. Vérifie l’e-mail de confirmation, puis connecte-toi.');return}
+ currentUser=result.data.user;updateAuthUI();closeModal('authModal');await loadRemote();toast(authMode==='signup'?'Compte créé.':'Connexion réussie.');
+});
+async function signOut(){if(supabase)await supabase.auth.signOut();currentUser=null;updateAuthUI();closeModal('authModal');await loadRemote();toast('Déconnexion effectuée.')}
+function showMine(){view='mine';favesOnly=false;render();document.getElementById('annonces').scrollIntoView({behavior:'smooth'})}
+async function showMyOffers(){
+ document.getElementById('dashboard').classList.remove('hidden');document.getElementById('dashTitle').textContent='Mes offres';const b=document.getElementById('dashBody');
+ if(backendConfigured){
+  if(!currentUser){b.innerHTML='<p class="small">Connecte-toi pour consulter tes offres.</p><button onclick="openAuth()">Connexion</button>';return}
+  const {data,error}=await supabase.from('offers').select('id,listing_id,buyer_id,amount_cents,message,status,created_at,listings(title,seller_id)').order('created_at',{ascending:false}).limit(100);
+  if(error){b.textContent='Impossible de charger les offres : '+error.message;return}
+  const rows=(data||[]).filter(o=>o.buyer_id===currentUser.id||o.listings?.seller_id===currentUser.id);
+  if(!rows.length){b.innerHTML='<p class="small">Aucune offre reçue ou envoyée.</p>';return}
+  b.innerHTML=rows.map(o=>`<div class="listrow"><div><strong>${esc(o.listings?.title||'Annonce')}</strong><div class="small">${money(o.amount_cents/100)} · ${esc(o.status)} · ${new Date(o.created_at).toLocaleString('fr-FR')}</div><div class="small">${esc(o.message||'')}</div></div>${o.listings?.seller_id===currentUser.id&&o.status==='pending'?`<button onclick="respondOffer('${esc(o.id)}','accepted')">Accepter</button><button class="light" onclick="respondOffer('${esc(o.id)}','rejected')">Refuser</button>`:''}</div>`).join('');return;
+ }
+ if(!state.offers.length){b.innerHTML='<p class="small">Aucune offre enregistrée sur cet appareil.</p>';return}
+ b.innerHTML=state.offers.map(o=>{const x=getItem(o.itemId);return `<div class="listrow"><div><strong>${esc(x?.name||'Annonce supprimée')}</strong><div class="small">${esc(o.buyer)} · ${money(o.amount)} · ${esc(o.status)} · ${new Date(o.created_at).toLocaleString('fr-FR')}</div><div class="small">${esc(o.message)}</div></div><button class="light" onclick="deleteOffer('${esc(o.id)}')">Supprimer</button></div>`}).join('')
+}
+async function respondOffer(id,status){const {error}=await supabase.from('offers').update({status,updated_at:new Date().toISOString()}).eq('id',id);if(error){toast('Action impossible : '+error.message);return}toast(status==='accepted'?'Offre acceptée. Organisez directement la vente.':'Offre refusée.');showMyOffers()}
+function deleteOffer(id){state.offers=state.offers.filter(x=>x.id!==id);save();showMyOffers();toast('Offre supprimée.')}
+function hideDashboard(){document.getElementById('dashboard').classList.add('hidden')}
+function exportBackup(){const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='endirect-sauvegarde.json';a.click();URL.revokeObjectURL(a.href);toast('Sauvegarde locale exportée.')}
+function importBackup(ev){const file=ev.target.files[0];if(!file)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(!Array.isArray(d.items)||!Array.isArray(d.offers)||!Array.isArray(d.faves))throw Error();if(!confirm('Remplacer les données locales par cette sauvegarde ?'))return;state=d;save();render();toast('Sauvegarde importée.')}catch{toast('Fichier de sauvegarde invalide.')}ev.target.value=''};r.readAsText(file)}
+init();
+</script>
+</body></html>
